@@ -1,0 +1,36 @@
+<header class="d-flex justify-content-center">
+  <!-- BACKGROUND IMAGE -->
+  <div class="hero"></div>
+  <!-- INTRO SECTION -->
+  <section class="container h-100 py-5">
+    <!-- LOGO -->
+    <div class="row h-100 align-items-center">
+      <div class="col-md-6 h-100 mt-5">
+        <div class="header-img mt-5" style="background-image: url({{image}});">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item"  [class.active]="i==0" *ngFor="let project of topRatedProjectsArray;let i=index" >
+                <img [src]="'http://127.0.0.1:8000'+project.images[0].image" alt="project image" class="d-block w-100">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span aria-hidden="true"></span>
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span aria-hidden="true"></span>
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="homepage-container">
+          <h1 class="h3 hero-headline no-toc mb-4">Fundraising on GoFundMe <br>takes just a few minutes</h1>
+          <a routerLink="/profile/myprojects" id="started" class="btn btn-outline-warning down"  *ngIf="token">My Projects</a>
+          <a routerLink="/register" id="started" class="btn btn-outline-warning down"  *ngIf="!token">Join Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
