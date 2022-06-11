@@ -10,7 +10,7 @@ The aim of the project: Create a web platform for starting fundraiser projects i
 `Step 1` : Download the source code .
 
 ```
-git clone https://github.com/Hala-salah77/crowd-fund.git
+git clone https://github.com/MohamedAlabasy/Crowd-Funding-Web-App-Angualr-ITI.git
 ```
 
 `Step 2` : download background API
